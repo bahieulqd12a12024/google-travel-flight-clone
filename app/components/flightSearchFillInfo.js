@@ -99,9 +99,10 @@ export default function FlightSearchFillInfo() {
                             >
                                 <div className="p-4 w-full">
 
-                                    {typeOfFlightListComplete.map((item) => (
+                                    {typeOfFlightListComplete.map((item, index) => (
                                         <div
                                             className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                                            key={index}
                                         >
                                             <div className="flex flex-col">
                                                 <button type="button" onClick={() => { setTypeOfFlight(item.name); setTypeOfFlightCodeIcon(item.codeIcon); }} className="block font-semibold text-gray-900">
@@ -127,9 +128,10 @@ export default function FlightSearchFillInfo() {
                                 className="absolute rounded-3xl bg-white w-96 -ml-0.5 shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                             >
                                 <div className="p-4">
-                                    {typeOfPeopleByAge.map((item) => (
+                                    {typeOfPeopleByAge.map((item, index) => (
                                         <div
                                             className="relative flex gap-x-6 grid grid-cols-2 items-center rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 font-semibold text-gray-900"
+                                            key={index}
                                         >
                                             <div className="justify-self-start">
                                                 <a className="font-semibold text-gray-900">
@@ -167,9 +169,10 @@ export default function FlightSearchFillInfo() {
                             >
                                 <div className="p-4 w-full">
 
-                                    {typeOfServiceFlightByLevel.map((item) => (
+                                    {typeOfServiceFlightByLevel.map((item, index) => (
                                         <div
                                             className="group relative w-full items-center rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                                            key={index}
                                         >
                                             <div className="flex flex-col">
                                                 <button type="button" className="font-semibold text-gray-900" onClick={() => setTypeOfServiceFlightToUpdate(item.name)}>

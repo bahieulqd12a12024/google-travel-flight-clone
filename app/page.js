@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import HeaderGoogleTravel from './components/header'
 import FlightSearchFillInfo from './components/flightSearchFillInfo'
 import {
@@ -43,16 +44,22 @@ export default function Example() {
 
   return (
     <div className="text-white">
-      <HeaderGoogleTravel/>
+      <HeaderGoogleTravel />
       <div className="flex justify-center">
-        <img className="h-96 w-2/3" src="/Screenshot 2024-09-27 at 4.46.17 PM.png" />
+        <Image 
+          className="h-96 w-2/3"
+          src="/Screenshot 2024-09-27 at 4.46.17 PM.png"
+          alt="Flight desire"
+          width={800}
+          height={600}
+        />
       </div>
       <div className="justify-between text-center my-1">
         <a href="#" className="-m-1.5 p-1.5 text-6xl">
           Flights
         </a>
       </div>
-      <FlightSearchFillInfo/>
+      <FlightSearchFillInfo />
       <div className="justify-center flex">
         <p
           href="#"
@@ -78,7 +85,13 @@ export default function Example() {
         </PopoverGroup>
       </div>
       <div className="flex justify-center">
-        <img className="h-80 w-1/2" src="/Screenshot2024-09-27at3.24.35PM.png" />
+        <Image
+          className="h-80 w-1/2"
+          src="/Screenshot2024-09-27at3.24.35PM.png"
+          alt="Map for flight"
+          width={800}
+          height={600}
+        />
       </div>
     </div>
   )
